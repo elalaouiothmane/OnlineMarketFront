@@ -1,0 +1,17 @@
+<div *ngIf="products">
+  <div class="row">
+    <div *ngFor="let p of products">
+      <div class="card">
+        <img class="card-img-top" src="{{this.catalogueService.host + '/photoProduct/' + p.id}}" alt="">
+        <div class="card-body">
+          <h5 class="card-title">{{p.name}}</h5>
+          <p class="card-text">{{p.description}}</p>
+          <a href="#" class="btn btn-dark mr-3">Panier</a>
+          <span class="badge bg-warning rounded-pill">{{p.currentPrice | currency}}</span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

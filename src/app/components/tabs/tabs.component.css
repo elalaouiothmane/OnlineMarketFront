@@ -1,3 +1,12 @@
-li{
+ul li{
   border-bottom: #FFA500 2px solid;
+  background-color:black ;
+  opacity: 0.85;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  color: darkgray;
 }

@@ -9,16 +9,19 @@ import {Category} from '../../Entities/category';
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent implements OnInit {
-  categories: Category[];
+  categories: Object = [];
   constructor(private catalogueService: CatalogueService) { }
 
   ngOnInit(): void {
     this.getCategories();
-    this.categories = [];
   }
 
   private getCategories() {
      this.catalogueService.getResource('categories').
-    subscribe(data => {this.categories = data._embedded.categories; });
+    subscribe(data => {
+      console.log(data);
+      this.categories = data;
+
+    });
   }
 }
